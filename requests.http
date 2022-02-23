@@ -1,0 +1,20 @@
+
+
+@endpoint = https://mkbghefixb.execute-api.eu-central-1.amazonaws.com/prod/
+
+@token = eyJraWQiOiJVVnBGOFVPS2dBcWp1dkhPTDN1djl3WUhkNHoxRGptMjJCNk1RU0RVUXZVPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiZjc0ZjY1YzktY2EwYy00ZDBiLTljMjgtOTExMGQzM2U0Yzg5Iiwic3ViIjoiOTE0NWE3YjMtOTY1Zi00MGJhLTkzMWItYzM3MTI2YTQ5ZDZjIiwiZXZlbnRfaWQiOiJjM2MwYjYwMC0xZDA3LTRkY2MtOGFlMi03MTdjN2M2Y2EyMjQiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNjQ1NTI1NzQ3LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb21cL2V1LWNlbnRyYWwtMV9OSGI4M0NqbkkiLCJleHAiOjE2NDU1MjkzNDYsImlhdCI6MTY0NTUyNTc0NywianRpIjoiMzQxNmJjZGQtMGI3ZC00ZGUyLTg2NWEtOWVjMzA5Y2ZmN2I5IiwiY2xpZW50X2lkIjoiMzk2YTBzcXZjMWtvYnVnOW04bmk1cTlhbWkiLCJ1c2VybmFtZSI6ImxheG1pIn0.jynK1xyiYJwExTD9XvwmJ86jCJ9O3k2Mz4lffp41jCDeFQLcRWyHcVJkWLNeoJ6GVuKUpE_Zzr-eiU5ZeJ8eCiWTsJEf-pz5bigqWWMp1IJKuuO38X6AhW_KH6VJ9TcLWZCmB_s5GKSqZOIbe8xEdMMcTgarte6spsyeQr5b_N510YNrfjJoCEFAebznxx0ajxPjyGTP9c212eqRetEE2FzrSShrDTESXSQvz6s49JDaE7b2O2orpXX3Xyhi4owQhvcR-73CeUj60H6K9I5A4Yfj8ZR7ZUdnUmz8VJMFNtpRH3WuF7SFpEx_M8hXBQhHB4IoNcl283bDDxSi4uoGhw
+GET  {{endpoint}}/hello/
+Authorization: {{token}}
+###
+
+GET  {{endpoint}}/spaces?spaceId=jkl
+###
+
+POST {{endpoint}}/spaces/
+Content-Type: application/json
+
+{
+    "location": "Naxal",
+    "name": "Beautiful Location"
+}
+###

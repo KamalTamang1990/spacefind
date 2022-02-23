@@ -1,0 +1,235 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Space-find.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Space-find.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Space-find": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Space-find.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/712870d485d3eda6ace779df5e08ee8f0c3bec7dc8e2b021164ff7ad1d2a15e6.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Space-find.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "SpaceFind"
+      },
+      "dependencies": [
+        "Space-find.assets"
+      ],
+      "metadata": {
+        "/Space-find/SpaceFindApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApi18BE2EA9"
+          }
+        ],
+        "/Space-find/SpaceFindApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApiCloudWatchRoleBADE7D9C"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApiAccount4FBCEC28"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApiDeployment9AC7FC48e3d8378a9db74e4c82accb7b242d8599"
+          }
+        ],
+        "/Space-find/SpaceFindApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApiDeploymentStageprod7AF91A2A"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApiEndpoint77DFD906"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApihello4200B2B5"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/hello/GET/ApiPermission.SpacefindSpaceFindApiB7390014.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApihelloGETApiPermissionSpacefindSpaceFindApiB7390014GEThelloDBB4904F"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/hello/GET/ApiPermission.Test.SpacefindSpaceFindApiB7390014.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApihelloGETApiPermissionTestSpacefindSpaceFindApiB7390014GEThello4D12E22D"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApihelloGETDDF7CD15"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/spaces/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApispaces0463F0AE"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/spaces/POST/ApiPermission.SpacefindSpaceFindApiB7390014.POST..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApispacesPOSTApiPermissionSpacefindSpaceFindApiB7390014POSTspaces813C930A"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/spaces/POST/ApiPermission.Test.SpacefindSpaceFindApiB7390014.POST..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApispacesPOSTApiPermissionTestSpacefindSpaceFindApiB7390014POSTspaces1D18AD3E"
+          }
+        ],
+        "/Space-find/SpaceFindApi/Default/spaces/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceFindApispacesPOSTFDEFF1C8"
+          }
+        ],
+        "/Space-find/SpacesTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SpacesTable8A997355"
+            }
+          }
+        ],
+        "/Space-find/SpacesTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTable8A997355"
+          }
+        ],
+        "/Space-find/SpacesTable-Create/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreateServiceRoleE49CA3B4"
+          }
+        ],
+        "/Space-find/SpacesTable-Create/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreateServiceRoleDefaultPolicy308B2E77"
+          }
+        ],
+        "/Space-find/SpacesTable-Create/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreate125CEC52"
+          }
+        ],
+        "/Space-find/SpaceUserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceUserPool6AB542DC"
+          }
+        ],
+        "/Space-find/SpaceUserPool/SpaceUserPool-client/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceUserPoolSpaceUserPoolclient4839E5E8"
+          }
+        ],
+        "/Space-find/UserPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolId"
+          }
+        ],
+        "/Space-find/UserPoolClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolClientId"
+          }
+        ],
+        "/Space-find/SpaceUserAuthorizer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceUserAuthorizer401AE1AA"
+          }
+        ],
+        "/Space-find/helloLambdaNodeJsFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJsFunctionServiceRole3CB63A33"
+          }
+        ],
+        "/Space-find/helloLambdaNodeJsFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJsFunctionServiceRoleDefaultPolicyED2010F2"
+          }
+        ],
+        "/Space-find/helloLambdaNodeJsFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJsFunction0898EE02"
+          }
+        ],
+        "/Space-find/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Space-find/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Space-find/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Space-find/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Space-find"
+    }
+  }
+}
