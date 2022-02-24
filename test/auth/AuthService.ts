@@ -27,11 +27,11 @@ export class AuthService {
 
     }
     public async getAWSTemporaryCreds(user: CognitoUser){
-        const congnitoIdentityPool = `cognito-idp.${config.REGION}.amazon.com/${config.USER_POOL_ID}`;
+        const cognitoIdentityPool = `cognito-idp.${config.REGION}.amazon.com/${config.USER_POOL_ID}`;
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
             IdentityPoolId: config.IDENTITY_POOL_ID,
             Logins:{
-                [congnitoIdentityPool]: user.getSignInUserSession()!.getIdToken().getJwtToken()
+                [cognitoIdentityPool]: user.getSignInUserSession()!.getIdToken().getJwtToken()
             }
             }, {
                 region: config.REGION
